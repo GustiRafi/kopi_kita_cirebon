@@ -10,4 +10,9 @@ class table extends Model
     use HasFactory;
 
     protected $guarded =['id'];
+
+    public function pesanan()
+    {
+        return $this->belongsTo(pesanan::class);
+    }
 }

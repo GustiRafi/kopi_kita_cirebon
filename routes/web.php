@@ -25,3 +25,4 @@ Route::resource('/menu',App\Http\Controllers\owner\menuController::class)->middl
 Route::post('/tambah-meja', [App\Http\Controllers\owner\tableController::class, 'store'])->middleware('auth');
 Route::post('/hapus-meja', [App\Http\Controllers\owner\tableController::class, 'delete'])->middleware('auth');
 Route::get('/buat-pesanan',[App\Http\Controllers\waiter\pesanController::class, 'index'])->middleware('auth');
+Route::get('/pilih-menu',[App\Http\Controllers\waiter\pesanController::class, 'select'])->middleware('auth');
